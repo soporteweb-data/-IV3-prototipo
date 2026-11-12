@@ -1,0 +1,271 @@
+/* ==========================================================================
+   IV3 Arquitectura — prototipo
+   Estilos de las secciones nuevas (Testimonios y Sobre nosotros) y ajustes
+   para que el clon funcione sin los scripts de WordPress/Elementor.
+   Tokens tomados del sitio: Century, #F0A23E, #1A1B1D, #F4F1EC, #D9D3C8.
+   ========================================================================== */
+:root {
+  --iv3-orange: #F0A23E;
+  --iv3-orange-dark: #d98b27;
+  --iv3-dark: #1A1B1D;
+  --iv3-black: #0E0F10;
+  --iv3-beige: #F4F1EC;
+  --iv3-line: #D9D3C8;
+  --iv3-text: #6A6A6A;
+  --iv3-radius: 15px;
+  --iv3-shadow: 0 10px 10px rgba(0, 0, 0, .25);
+  --iv3-shadow-soft: 0 18px 40px rgba(14, 15, 16, .10);
+  --iv3-max: 1140px;
+}
+
+/* --- Comportamiento que antes hacía el JS de Elementor --------------------- */
+html { scroll-behavior: smooth; }
+.elementor-location-header { position: sticky; top: 0; z-index: 999; }
+.elementor-location-header > .e-con { transition: box-shadow .3s ease; }
+.elementor-location-header.is-scrolled > .e-con { box-shadow: 0 6px 20px rgba(0, 0, 0, .08); }
+[data-prototype-form] .iv3-form-ok {
+  margin-top: 14px; padding: 12px 16px; border-radius: 10px;
+  background: rgba(240, 162, 62, .14); color: inherit; font-size: 14px; line-height: 1.5;
+}
+/* Menú desplegable en tablet (Elementor calculaba el ancho con JS) */
+.elementor-widget-n-menu .e-n-menu[data-layout=dropdown] .e-n-menu-wrapper {
+  position: fixed; left: 0; right: 0; width: 100%; top: var(--iv3-menu-top, 74px); margin: 0;
+  background: #F4F1EC; box-shadow: 0 14px 24px rgba(0, 0, 0, .12); padding: 8px 0 14px;
+}
+.elementor-widget-n-menu .e-n-menu[data-layout=dropdown] .e-n-menu-heading { flex-direction: column; width: 100%; }
+.elementor-widget-n-menu .e-n-menu[data-layout=dropdown] .e-n-menu-title { justify-content: center; padding: 12px 20px; }
+.elementor-widget-loop-grid .e-loop-item.iv3-hidden { display: none !important; }
+.elementor-pagination .page-numbers { cursor: pointer; }
+
+/* Animación de entrada sutil para las secciones nuevas */
+.iv3-reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+.iv3-reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .iv3-reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* --- Base compartida ------------------------------------------------------- */
+.iv3-sec { font-family: "Century", Sans-serif; color: var(--iv3-text); padding: 110px 20px; }
+.iv3-sec *, .iv3-sec *::before, .iv3-sec *::after { box-sizing: border-box; }
+.iv3-wrap { max-width: var(--iv3-max); margin: 0 auto; }
+.iv3-h2 {
+  font-family: "Century", Sans-serif; font-weight: 400; font-size: 52px; line-height: 1.1;
+  color: var(--iv3-black); margin: 0;
+}
+.iv3-h2 em { color: var(--iv3-orange); font-style: italic; }
+.iv3-lead { font-size: 16px; line-height: 1.7; margin: 0; }
+.iv3-eyebrow {
+  display: inline-block; font-size: 15px; color: var(--iv3-orange); letter-spacing: .02em; margin-bottom: 18px;
+}
+.iv3-sec-head { text-align: center; max-width: 900px; margin: 0 auto 56px; }
+.iv3-sec-head .iv3-lead { max-width: 640px; margin-left: auto; margin-right: auto; }
+.iv3-sec-head .iv3-lead { margin-top: 18px; }
+.iv3-dark { background: var(--iv3-dark); color: rgba(255, 255, 255, .72); }
+.iv3-dark .iv3-h2 { color: #fff; }
+.iv3-beige { background: var(--iv3-beige); }
+
+/* ==========================================================================
+   TESTIMONIOS (Inicio)
+   ========================================================================== */
+.iv3-testimonios { background: var(--iv3-beige); overflow: hidden; }
+.iv3-carousel { position: relative; }
+.iv3-viewport { overflow: hidden; margin: -24px -14px; padding: 24px 14px 34px; }
+.iv3-track {
+  list-style: none; margin: 0; padding: 0; display: flex; gap: 28px;
+  transition: transform .7s cubic-bezier(.22, .8, .2, 1); will-change: transform;
+}
+.iv3-tcard {
+  flex: 0 0 calc((100% - 56px) / 3);
+  background: #fff; border-radius: var(--iv3-radius); overflow: hidden;
+  box-shadow: var(--iv3-shadow); display: flex; flex-direction: column;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.iv3-tcard:hover { transform: translateY(-6px); box-shadow: 0 20px 30px rgba(0, 0, 0, .18); }
+.iv3-tphoto { position: relative; margin: 0; aspect-ratio: 5 / 4.8; overflow: hidden; background: #ddd; }
+.iv3-tphoto img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; display: block;
+  transition: transform 1.2s cubic-bezier(.2, .7, .2, 1);
+}
+.iv3-tcard:hover .iv3-tphoto img { transform: scale(1.04); }
+.iv3-tphoto::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 45%;
+  background: linear-gradient(to top, rgba(14, 15, 16, .55), transparent);
+}
+.iv3-tquote-badge {
+  position: absolute; left: 24px; bottom: -26px; z-index: 2;
+  width: 52px; height: 52px; border-radius: 50%; background: var(--iv3-orange);
+  display: grid; place-items: center; box-shadow: 0 8px 18px rgba(240, 162, 62, .45);
+}
+.iv3-tquote-badge svg { width: 22px; height: 22px; fill: #fff; }
+.iv3-tnum {
+  position: absolute; right: 22px; bottom: 16px; z-index: 2; color: #fff; font-size: 14px; letter-spacing: .04em;
+}
+.iv3-tbody { padding: 44px 28px 28px; display: flex; flex-direction: column; flex: 1; }
+.iv3-tbody blockquote {
+  margin: 0 0 24px; font-size: 16px; line-height: 1.65; color: #3c3d3f; quotes: "“" "”";
+}
+.iv3-tbody blockquote::before { content: open-quote; }
+.iv3-tbody blockquote::after { content: close-quote; }
+.iv3-tauthor {
+  margin: auto 0 0; padding-top: 18px; border-top: 1px solid var(--iv3-line);
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.iv3-tauthor strong { display: block; color: var(--iv3-black); font-weight: 700; font-size: 15px; }
+.iv3-tauthor span { display: block; font-size: 13px; color: var(--iv3-text); margin-top: 2px; }
+.iv3-tauthor .iv3-check {
+  flex: none; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--iv3-line);
+  display: grid; place-items: center;
+}
+.iv3-tauthor .iv3-check svg { width: 15px; height: 15px; fill: var(--iv3-orange); }
+
+.iv3-controls { display: flex; align-items: center; justify-content: center; gap: 22px; margin-top: 34px; }
+.iv3-arrow {
+  width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--iv3-black);
+  background: transparent; color: var(--iv3-black); display: grid; place-items: center;
+  cursor: pointer; padding: 0; transition: background .25s, color .25s, border-color .25s, transform .25s;
+}
+.iv3-arrow svg { width: 16px; height: 16px; fill: currentColor; }
+.iv3-arrow:hover, .iv3-arrow:focus-visible { background: var(--iv3-orange); border-color: var(--iv3-orange); color: #000; transform: scale(1.06); outline: none; }
+.iv3-arrow:disabled { opacity: .3; pointer-events: none; }
+.iv3-dots { display: flex; gap: 10px; }
+.iv3-dots button {
+  width: 10px; height: 10px; border-radius: 10px; border: 0; padding: 0; cursor: pointer;
+  background: #cfc8bc; transition: width .35s ease, background .35s ease;
+}
+.iv3-dots button[aria-current="true"] { width: 30px; background: var(--iv3-orange); }
+
+/* ==========================================================================
+   SOBRE NOSOTROS
+   ========================================================================== */
+/* Hero: reutiliza el contenedor del hero de Portafolio y añade el subtítulo */
+.iv3-hero-sub {
+  font-family: "Century", Sans-serif; color: rgba(255, 255, 255, .82); font-size: 22px; line-height: 1.45;
+  max-width: 640px; margin: 18px auto 0; text-align: center;
+}
+.iv3-hero-sub em { color: var(--iv3-orange); }
+.iv3-hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px; color: #fff; border: 2px solid #fff; border-radius: 40px;
+  padding: 6px 18px; font: 700 14px "Century", Sans-serif; margin: 0 auto 22px;
+}
+.iv3-hero-eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--iv3-orange); }
+.iv3-hero-crumbs { margin-top: 26px; font: 14px "Century", Sans-serif; color: rgba(255, 255, 255, .6); text-align: center; }
+.iv3-hero-crumbs a { color: rgba(255, 255, 255, .85); text-decoration: none; }
+.iv3-hero-crumbs a:hover { color: var(--iv3-orange); }
+
+/* Trayectoria */
+.iv3-tray-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 80px; align-items: start; }
+.iv3-tray-grid .iv3-lead + .iv3-lead { margin-top: 18px; }
+.iv3-uses { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.iv3-uses span {
+  border: 1px solid var(--iv3-line); border-radius: 40px; padding: 8px 16px; font-size: 14px; color: var(--iv3-black);
+  background: #fff;
+}
+.iv3-uses span.is-now { background: var(--iv3-orange); border-color: var(--iv3-orange); font-weight: 700; }
+.iv3-cycle-title { font-size: 15px; color: var(--iv3-black); margin: 6px 0 26px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; }
+.iv3-cycle { list-style: none; margin: 0; padding: 0; position: relative; counter-reset: step; }
+.iv3-cycle::before {
+  content: ""; position: absolute; left: 21px; top: 12px; bottom: 12px; width: 1px; background: var(--iv3-line);
+}
+.iv3-cycle li {
+  position: relative; display: grid; grid-template-columns: 44px 1fr; gap: 22px; align-items: start;
+  padding: 0 0 26px; counter-increment: step;
+}
+.iv3-cycle li:last-child { padding-bottom: 0; }
+.iv3-cycle li::before {
+  content: counter(step, decimal-leading-zero); width: 44px; height: 44px; border-radius: 50%;
+  background: #fff; border: 1px solid var(--iv3-line); display: grid; place-items: center;
+  font-size: 13px; color: var(--iv3-orange); position: relative; z-index: 1; transition: background .3s, color .3s, border-color .3s;
+}
+.iv3-cycle li:hover::before { background: var(--iv3-orange); color: #000; border-color: var(--iv3-orange); }
+.iv3-cycle h3 { margin: 10px 0 4px; font: 400 22px/1.2 "Century", Sans-serif; color: var(--iv3-black); }
+.iv3-cycle p { margin: 0; font-size: 15px; line-height: 1.6; }
+
+/* Enfoque */
+.iv3-enfoque .iv3-sec-head { margin-bottom: 64px; }
+.iv3-enfoque-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255, 255, 255, .16); }
+.iv3-enf {
+  padding: 40px 34px 10px; border-left: 1px solid rgba(255, 255, 255, .16); position: relative;
+}
+.iv3-enf:first-child { border-left: 0; padding-left: 0; }
+.iv3-enf:last-child { padding-right: 0; }
+.iv3-enf-num { color: var(--iv3-orange); font-size: 15px; }
+.iv3-enf-icon {
+  width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; margin: 26px 0 24px;
+  background: rgba(240, 162, 62, .12); border: 1px solid rgba(240, 162, 62, .35);
+  transition: background .35s ease, transform .35s ease;
+}
+.iv3-enf:hover .iv3-enf-icon { background: var(--iv3-orange); transform: rotate(-6deg); }
+.iv3-enf-icon svg { width: 28px; height: 28px; stroke: var(--iv3-orange); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: stroke .35s; }
+.iv3-enf:hover .iv3-enf-icon svg { stroke: #000; }
+.iv3-enf h3 { font: 400 30px/1.15 "Century", Sans-serif; color: #fff; margin: 0 0 16px; }
+.iv3-enf p { font-size: 15.5px; line-height: 1.7; margin: 0; }
+.iv3-enf p + p { margin-top: 12px; }
+
+/* Identidad */
+.iv3-ident-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 90px; align-items: center; }
+.iv3-ident-media { position: relative; }
+.iv3-ident-media img {
+  width: 100%; aspect-ratio: 5 / 6.2; object-fit: cover; border-radius: var(--iv3-radius);
+  box-shadow: var(--iv3-shadow); display: block;
+}
+.iv3-ident-tag {
+  position: absolute; right: -34px; bottom: 44px; background: var(--iv3-orange); color: #000;
+  border-radius: 20px; padding: 22px 26px; max-width: 250px; box-shadow: 0 14px 24px rgba(0, 0, 0, .22);
+  font: 700 15px/1.35 "Century", Sans-serif;
+}
+.iv3-ident-tag small { display: block; font-weight: 400; font-size: 13px; margin-top: 6px; }
+.iv3-ident-media::before {
+  content: ""; position: absolute; left: -22px; top: -22px; width: 46%; height: 46%;
+  border-left: 2px solid var(--iv3-orange); border-top: 2px solid var(--iv3-orange); border-top-left-radius: 22px;
+}
+.iv3-ident-body .iv3-lead { margin-top: 22px; }
+.iv3-traits { list-style: none; padding: 0; margin: 34px 0 0; border-top: 1px solid var(--iv3-line); }
+.iv3-traits li {
+  display: grid; grid-template-columns: 56px 1fr; align-items: center; gap: 14px;
+  padding: 18px 0; border-bottom: 1px solid var(--iv3-line);
+}
+.iv3-traits .ico {
+  width: 46px; height: 46px; border-radius: 12px; background: #fff; border: 1px solid var(--iv3-line);
+  display: grid; place-items: center;
+}
+.iv3-traits .ico svg { width: 24px; height: 24px; stroke: var(--iv3-orange); fill: none; stroke-width: 1.6; stroke-linejoin: round; stroke-linecap: round; }
+.iv3-traits strong { display: block; color: var(--iv3-black); font-size: 18px; font-weight: 400; }
+.iv3-traits span { font-size: 14px; }
+.iv3-ident-quote {
+  margin: 30px 0 0; padding-left: 20px; border-left: 3px solid var(--iv3-orange);
+  font-size: 17px; line-height: 1.6; color: var(--iv3-black);
+}
+.iv3-ident-quote em { color: var(--iv3-orange); }
+
+/* Ajuste del bloque "IV3 Arquitectura" reutilizado en Sobre nosotros */
+.iv3-about-intro .elementor-heading-title { text-wrap: balance; }
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .iv3-sec { padding: 90px 28px; }
+  .iv3-h2 { font-size: 44px; }
+  .iv3-tcard { flex-basis: calc((100% - 28px) / 2); }
+  .iv3-tray-grid, .iv3-ident-grid { grid-template-columns: 1fr; gap: 56px; }
+  .iv3-ident-media { max-width: 520px; }
+  .iv3-ident-tag { right: -14px; }
+  .iv3-enfoque-grid { grid-template-columns: 1fr; border-top: 0; }
+  .iv3-enf, .iv3-enf:first-child, .iv3-enf:last-child { border-left: 0; border-top: 1px solid rgba(255, 255, 255, .16); padding: 34px 0 30px; }
+}
+@media (max-width: 767px) {
+  .iv3-sec { padding: 72px 20px; }
+  .iv3-h2 { font-size: 34px; }
+  .iv3-sec-head { margin-bottom: 40px; }
+  .iv3-tcard { flex-basis: 100%; }
+  .iv3-track { gap: 16px; }
+  .iv3-viewport { margin: -24px -6px; padding: 24px 6px 30px; }
+  .iv3-tbody { padding: 40px 22px 24px; }
+  .iv3-hero-sub { font-size: 18px; }
+  .iv3-enf h3 { font-size: 26px; }
+  .iv3-ident-tag { position: relative; right: auto; bottom: auto; margin: -40px 16px 0; max-width: none; }
+  .iv3-ident-media::before { display: none; }
+  /* espacio para la barra inferior fija del móvil */
+  body { padding-bottom: 0; }
+}
