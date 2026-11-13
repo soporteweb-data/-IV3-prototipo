@@ -60,93 +60,70 @@
       nums.forEach(function (n) { cio.observe(n); });
     }
 
-    /* ---- Testimonios ------------------------------------------------------ */
+    /* ---- Testimonios: tarjeta destacada + miniaturas ---------------------- */
     document.querySelectorAll("[data-iv3-testimonios]").forEach(function (root) {
-      var items = Array.prototype.slice.call(root.querySelectorAll(".iv3-titem"));
-      var photos = root.querySelectorAll(".iv3-tphotos img");
-      var dots = root.querySelectorAll(".iv3-dots button");
+      var stage = root.querySelector(".iv3-tstage");
+      var slides = Array.prototype.slice.call(root.querySelectorAll(".iv3-tslide"));
+      var thumbs = Array.prototype.slice.call(root.querySelectorAll(".iv3-tthumb"));
       var countEl = root.querySelector(".iv3-tcount");
       var prev = root.querySelector(".iv3-arrow.prev"), next = root.querySelector(".iv3-arrow.next");
-      var n = items.length, active = 0, page = -1, timer = null;
+      var n = slides.length, active = 0, timer = null, DUR = 7000;
       var pad = function (x) { return (x < 10 ? "0" : "") + x; };
+      stage.style.setProperty("--iv3-dur", DUR / 1000 + "s");
 
-      function perPage() { return window.innerWidth <= 767 ? 1 : 2; }
-      function set(i, user) {
+      function restartProgress() {
+        stage.classList.remove("is-playing");
+        void stage.offsetWidth;
+        if (!reduce) stage.classList.add("is-playing");
+      }
+      function set(i) {
         active = (i + n) % n;
-        var per = perPage(), p = Math.floor(active / per);
-        items.forEach(function (it, k) {
-          var visible = Math.floor(k / per) === p;
-          if (visible && (p !== page || !it.classList.contains("is-visible"))) {
-            it.classList.remove("is-visible"); void it.offsetWidth; // reinicia la animación
-          }
-          it.classList.toggle("is-visible", visible);
-          it.classList.toggle("is-active", k === active);
-          it.setAttribute("aria-hidden", visible ? "false" : "true");
+        slides.forEach(function (s, k) {
+          s.classList.toggle("is-active", k === active);
+          s.setAttribute("aria-hidden", k === active ? "false" : "true");
         });
-        page = p;
-        Array.prototype.forEach.call(photos, function (ph, k) { ph.classList.toggle("is-active", k === active); });
-        Array.prototype.forEach.call(dots, function (d, k) { d.setAttribute("aria-current", k === active ? "true" : "false"); });
+        thumbs.forEach(function (t, k) {
+          t.classList.toggle("is-active", k === active);
+          if (k === active) t.setAttribute("aria-current", "true"); else t.removeAttribute("aria-current");
+        });
         if (countEl) countEl.innerHTML = "<b>" + pad(active + 1) + "</b> / " + pad(n);
-        if (user) play();
+        play();
       }
-      function stop() { if (timer) clearInterval(timer); timer = null; }
+      function stop() { if (timer) clearTimeout(timer); timer = null; }
       function play() {
-        if (reduce) return;
         stop();
-        timer = setInterval(function () { set(active + 1); }, 6500);
+        restartProgress();
+        if (reduce || paused) return;
+        timer = setTimeout(function () { set(active + 1); }, DUR);
       }
+      var paused = false;
+      function pause() { paused = true; stop(); stage.classList.add("is-paused"); }
+      function resume() { paused = false; stage.classList.remove("is-paused"); play(); }
 
-      if (prev) prev.addEventListener("click", function () { set(active - 1, true); });
-      if (next) next.addEventListener("click", function () { set(active + 1, true); });
-      Array.prototype.forEach.call(dots, function (d, k) { d.addEventListener("click", function () { set(k, true); }); });
-      items.forEach(function (it, k) {
-        it.addEventListener("click", function () { set(k, true); });
-        it.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); set(k, true); } });
-      });
-      root.addEventListener("mouseenter", stop);
-      root.addEventListener("mouseleave", play);
+      if (prev) prev.addEventListener("click", function () { set(active - 1); });
+      if (next) next.addEventListener("click", function () { set(active + 1); });
+      thumbs.forEach(function (t, k) { t.addEventListener("click", function () { set(k); }); });
+      stage.addEventListener("mouseenter", pause);
+      stage.addEventListener("mouseleave", resume);
       root.addEventListener("keydown", function (e) {
-        if (e.key === "ArrowLeft") set(active - 1, true);
-        if (e.key === "ArrowRight") set(active + 1, true);
+        if (e.key === "ArrowLeft") set(active - 1);
+        if (e.key === "ArrowRight") set(active + 1);
       });
       var x0 = null;
-      root.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
-      root.addEventListener("touchend", function (e) {
+      stage.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      stage.addEventListener("touchend", function (e) {
         if (x0 === null) return;
         var dx = e.changedTouches[0].clientX - x0;
         if (Math.abs(dx) > 40) set(active + (dx < 0 ? 1 : -1));
-        x0 = null; play();
+        x0 = null;
       });
-      // Alto fijo = página más alta, para que la sección no "salte" al cambiar
-      var list = root.querySelector(".iv3-titems");
-      function measure() {
-        var per = perPage(), max = 0;
-        list.style.minHeight = "";
-        for (var p = 0; p * per < n; p++) {
-          var h = 0;
-          items.forEach(function (it, k) {
-            if (Math.floor(k / per) !== p) return;
-            var was = it.style.display;
-            it.style.display = "grid";
-            h += it.getBoundingClientRect().height;
-            it.style.display = was;
-          });
-          max = Math.max(max, h);
-        }
-        list.style.minHeight = Math.ceil(max) + "px";
+      // Solo corre el autoplay cuando la sección está en pantalla
+      if (hasIO) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { if (!timer && !paused) play(); } else { stop(); stage.classList.remove("is-playing"); } });
+        }, { threshold: 0.3 }).observe(stage);
       }
-      var lastPer = perPage(), rz = null;
-      window.addEventListener("resize", function () {
-        clearTimeout(rz);
-        rz = setTimeout(function () {
-          if (perPage() !== lastPer) { lastPer = perPage(); page = -1; set(active); }
-          measure();
-        }, 150);
-      });
-      measure();
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
       set(0);
-      play();
     });
   });
 })();
