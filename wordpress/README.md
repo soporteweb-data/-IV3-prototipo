@@ -77,6 +77,25 @@ En *Plantillas → Theme Builder → Header* (y *Footer*):
   **Nosotros**, el ícono a *fas fa-users* y el enlace a `/sobre-nosotros/`. Queda de última.
 - **Footer** (lista "Portafolio | Contacto"): agrega **Sobre nosotros** al final.
 
+## Cuidados importantes (probado sobre el sitio real)
+
+Estas secciones se probaron insertándolas en iv3arquitectura.com con su tema, Elementor y estilos
+reales: se ven y funcionan igual que en el prototipo (escritorio y móvil, sin desbordes). Para que
+quede igual en producción:
+
+1. **Usa el widget "HTML"**, no el de "Editor de texto": el editor de texto agrega `<p>` y `<br>`
+   automáticamente y desarma el diseño.
+2. **El CSS debe cargar en el `<head>`** (Ajustes del sitio → CSS personalizado, o CSS adicional del
+   Personalizador). Si se carga tarde, por un instante se ven los 4 testimonios encimados.
+3. **Contenedores en ancho completo y relleno 0**: Elementor pone por defecto contenido "en caja" y
+   10 px de relleno; si se deja así, las secciones quedan con márgenes blancos.
+4. **Página Sobre nosotros**: el slug debe ser `sobre-nosotros` (los enlaces apuntan ahí) y hay que
+   activar *Ocultar título* en los ajustes de la página, porque el hero ya trae el título (H1).
+5. **Plugins de caché/optimización** (LiteSpeed, WP Rocket, Autoptimize…): si tienen "retrasar JS",
+   excluye `iv3-secciones` para que el carrusel y las cifras arranquen de inmediato. Después de
+   publicar, purga la caché.
+6. Pegar `<script>` en widgets HTML requiere un usuario **Administrador**.
+
 ## Notas
 
 - Los textos se editan dentro del widget HTML (son párrafos y títulos normales).
