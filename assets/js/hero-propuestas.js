@@ -4,9 +4,10 @@
   var heroes = document.querySelectorAll("[data-iv3-hero]");
   if (!heroes.length) return;
 
-  var OPCIONES = [["actual", "Actual"], ["1", '1<span class="iv3-sw-name"> · Dividido</span>'],
-    ["2", '2<span class="iv3-sw-name"> · Inmersivo</span>'], ["3", '3<span class="iv3-sw-name"> · Con formulario</span>']];
+  /* Versiones propuestas (la actual sigue disponible con ?hero=actual) */
+  var VERS = ["1", "2", "3"];
   var KEY = "iv3-hero";
+  var actual = "1";
 
   function leer() {
     var m = location.search.match(/[?&]hero=(\w+)/);
@@ -15,25 +16,44 @@
   }
   function mostrar(v) {
     if (!document.querySelector('[data-iv3-hero="' + v + '"]')) v = "1";
+    actual = v;
     heroes.forEach(function (h) { h.hidden = h.getAttribute("data-iv3-hero") !== v; });
-    bar.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", b.value === v ? "true" : "false"); });
+    var h = document.querySelector('[data-iv3-hero="' + v + '"]');
+    var i = VERS.indexOf(v);
+    txt.innerHTML = "<small>Propuesta de hero</small>" + (i < 0 ? "Versión actual" :
+      "<b>" + (i + 1) + "</b> / " + VERS.length + '<span class="iv3-switch-name"> · ' + (h.getAttribute("data-iv3-hero-name") || "") + "</span>");
     try { localStorage.setItem(KEY, v); } catch (e) {}
     try { history.replaceState(null, "", location.pathname + "?hero=" + v + location.hash); } catch (e) {}
   }
+  function mover(paso) {
+    var i = VERS.indexOf(actual);
+    i = i < 0 ? 0 : (i + paso + VERS.length) % VERS.length;
+    mostrar(VERS[i]);
+    if (window.scrollY > 200) window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
+  var FLECHA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var bar = document.createElement("div");
   bar.className = "iv3-switch";
   bar.setAttribute("role", "group");
-  bar.setAttribute("aria-label", "Versión del hero");
-  bar.innerHTML = '<span class="iv3-switch-label">Versión del hero</span>' +
-    OPCIONES.map(function (o) { return '<button type="button" value="' + o[0] + '">' + o[1] + "</button>"; }).join("");
+  bar.setAttribute("aria-label", "Cambiar versión del hero");
+  bar.innerHTML = '<button type="button" data-paso="-1" aria-label="Versión anterior">' + FLECHA + "</button>" +
+    '<span class="iv3-switch-txt" aria-live="polite"></span>' +
+    '<button type="button" data-paso="1" aria-label="Versión siguiente" style="transform:scaleX(-1)">' + FLECHA + "</button>";
+  var txt = bar.querySelector(".iv3-switch-txt");
   bar.addEventListener("click", function (e) {
     var b = e.target.closest("button");
-    if (!b) return;
-    mostrar(b.value);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (b) mover(+b.getAttribute("data-paso"));
   });
   document.body.appendChild(bar);
+
+  /* Ubicar el selector justo debajo del header */
+  function alto() {
+    var hd = document.querySelector(".elementor-location-header");
+    if (hd) document.documentElement.style.setProperty("--iv3-hdr-h", Math.round(hd.getBoundingClientRect().height) + "px");
+  }
+  alto();
+  window.addEventListener("resize", alto);
   mostrar(leer());
 
   /* Ventana emergente */
