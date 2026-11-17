@@ -43,8 +43,8 @@ Si el JS no carga, las secciones se ven igual pero sin animaciones ni carrusel a
 1. *Medios → Añadir nuevo* → sube los 4 archivos de `imagenes-para-subir/`.
 2. Copia la URL de cada una y reemplázala en `inicio-testimonios.html` donde dice
    `https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_N.jpeg`.
-   Cada foto aparece **dos veces**: en la foto grande (`<img>`) y en el avatar redondo
-   (`background-image` del `iv3-tavatar`). Con "Buscar y reemplazar" se cambian ambas.
+   Cada foto aparece **dos veces**: en la foto grande del testimonio y en su miniatura de abajo
+   (ambas son `<img src="…">`). Con "Buscar y reemplazar" se cambian las dos.
 3. Si tienen los nombres de los clientes, cámbienlos en cada `Cliente IV3 Arquitectura`.
 
 ## 3. Inicio
