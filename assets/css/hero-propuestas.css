@@ -69,15 +69,18 @@
 .iv3-form-dark .iv3-hcheck { color: rgba(255, 255, 255, .55); }
 .iv3-form-dark .iv3-hform-msg { background: rgba(255, 255, 255, .1); color: #fff; }
 
-/* Tarjeta negra (propuesta 1) */
+/* Tarjeta negra (propuestas 1 y 2) */
 .iv3-form-card { background: rgba(14, 15, 16, .94); border: 1px solid rgba(255, 255, 255, .08); border-radius: 16px; padding: 28px; box-shadow: 0 30px 70px rgba(0, 0, 0, .4); backdrop-filter: blur(10px); }
 
-/* Formulario ancho en dos filas (propuesta 3) */
-.iv3-form-wide { width: 100%; max-width: 860px; margin: 0 auto; background: rgba(14, 15, 16, .9); border: 1px solid rgba(255, 255, 255, .08); border-radius: 16px; padding: 26px 28px 22px; box-shadow: 0 30px 70px rgba(0, 0, 0, .35); backdrop-filter: blur(10px); text-align: left; }
-.iv3-form-wide .iv3-hform { grid-template-columns: repeat(3, 1fr); }
-.iv3-form-wide .iv3-hform-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
-.iv3-form-wide .iv3-hform-sub { margin: 0; }
-.iv3-form-wide .iv3-hf-ubic, .iv3-form-wide .iv3-hform-submit { grid-column: auto; }
+/* Formulario de líneas, sin cajas (propuesta 3) */
+.iv3-form-line .iv3-hform { column-gap: 28px; row-gap: 6px; }
+.iv3-form-line .iv3-hform-head { margin-bottom: 10px; }
+.iv3-form-line .iv3-hfield input, .iv3-form-line .iv3-hfield select { height: 54px; padding: 0; border: 0; border-bottom: 1px solid rgba(255, 255, 255, .2); border-radius: 0; background-color: transparent; }
+.iv3-form-line .iv3-hfield select { background-position: right 0 center; }
+.iv3-form-line .iv3-hfield input:focus, .iv3-form-line .iv3-hfield select:focus { background-color: transparent; border-bottom-color: var(--iv3-orange); }
+.iv3-form-line .iv3-hfield.is-error input, .iv3-form-line .iv3-hfield.is-error select { border-bottom-color: #d0533f; }
+.iv3-form-line .iv3-hform-submit { margin-top: 22px; border-radius: 40px; }
+.iv3-form-line .iv3-hcheck { margin-top: 6px; }
 
 /* --- Propuesta 1 · Tarjeta -------------------------------------------------- */
 .iv3-hero-1::before { background: linear-gradient(90deg, rgba(14, 15, 16, .8) 0%, rgba(14, 15, 16, .5) 55%, rgba(14, 15, 16, .25) 100%); }
@@ -85,56 +88,41 @@
 .iv3-hero-1 h1 { font-size: clamp(42px, 4.6vw, 64px); margin-bottom: 20px; }
 .iv3-hero-1 .iv3-hero-lead { margin-bottom: 32px; }
 
-/* --- Propuesta 2 · Columna -------------------------------------------------- */
-.iv3-hero-2 { display: grid; grid-template-columns: 1fr minmax(400px, 34%); min-height: 620px; }
-.iv3-hero-2::before { display: none; }
-.iv3-h2-media { position: relative; overflow: hidden; display: flex; align-items: flex-end; }
-.iv3-h2-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14, 15, 16, .85) 0%, rgba(14, 15, 16, .35) 55%, rgba(14, 15, 16, .1) 100%); }
-.iv3-hero-2 .iv3-hero-bg { object-position: 50% 35%; }
-.iv3-h2-copy { position: relative; z-index: 2; width: 100%; padding: 56px 56px 52px max(32px, calc((100vw - var(--iv3-max)) / 2)); }
-.iv3-hero-2 h1 { font-size: clamp(40px, 4.4vw, 62px); margin-bottom: 18px; }
-.iv3-hero-2 .iv3-hero-lead { margin-bottom: 28px; }
-.iv3-h2-side { position: relative; z-index: 2; display: flex; align-items: center; background: var(--iv3-black); padding: 48px max(32px, calc((100vw - var(--iv3-max)) / 2)) 48px 48px; }
-.iv3-h2-side::before { content: ""; position: absolute; left: 0; top: 48px; bottom: 48px; width: 3px; background: var(--iv3-orange); }
-.iv3-h2-side .iv3-hero-form { width: 100%; max-width: 380px; }
-.iv3-h2-side .iv3-hform-title { font-size: 26px; }
+/* --- Propuestas 2 y 3 · Minimal (sin foto, solo tipografía y formulario) ---- */
+.iv3-hero-2::before, .iv3-hero-3::before { display: none; }
+.iv3-hero-2 .iv3-hero-in, .iv3-hero-3 .iv3-hero-in { display: grid; grid-template-columns: 1fr 400px; align-items: center; gap: 96px; min-height: 580px; padding-top: 72px; padding-bottom: 72px; }
+.iv3-hero-2 h1, .iv3-hero-3 h1 { font-size: clamp(44px, 5vw, 72px); font-weight: 400; line-height: 1.02; letter-spacing: -.03em; margin-bottom: 24px; }
+.iv3-hero-2 .iv3-hero-lead, .iv3-hero-3 .iv3-hero-lead { margin-bottom: 36px; }
 
-/* --- Propuesta 3 · Centrado ------------------------------------------------- */
-.iv3-hero-3::before { background: linear-gradient(180deg, rgba(14, 15, 16, .7) 0%, rgba(14, 15, 16, .55) 50%, rgba(14, 15, 16, .8) 100%); }
-.iv3-hero-3 .iv3-hero-in { min-height: 620px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-top: 64px; padding-bottom: 56px; }
-.iv3-hero-3 h1 { font-size: clamp(40px, 4.6vw, 64px); margin-bottom: 16px; max-width: 900px; }
-.iv3-hero-3 .iv3-hero-lead { max-width: 560px; margin-bottom: 36px; }
-.iv3-hero-3 .iv3-hero-link { margin-top: 26px; }
+/* 2 · Minimal claro */
+.iv3-hero-2 { background: var(--iv3-beige); color: var(--iv3-text); border-bottom: 1px solid var(--iv3-line); }
+.iv3-hero-2 h1 { color: var(--iv3-black); }
+.iv3-hero-2 .iv3-kicker { color: var(--iv3-text); }
+.iv3-hero-2 .iv3-hero-link { color: var(--iv3-black) !important; }
+.iv3-hero-2 .iv3-form-card { box-shadow: 0 30px 60px rgba(14, 15, 16, .18); }
+
+/* 3 · Minimal oscuro */
+.iv3-hero-3 { background: var(--iv3-black); }
+.iv3-hero-3 .iv3-hero-in { grid-template-columns: 1fr 420px; }
+.iv3-hero-3 .iv3-hero-copy { padding-right: 96px; border-right: 1px solid rgba(255, 255, 255, .1); }
+.iv3-hero-3 .iv3-hero-in { gap: 80px; }
 
 /* --- Responsive ----------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .iv3-hero-1 .iv3-hero-in { grid-template-columns: 1fr; gap: 36px; min-height: 0; padding-top: 56px; }
-  .iv3-hero-1 .iv3-form-card { max-width: 520px; }
-  .iv3-hero-2 { grid-template-columns: 1fr; }
-  .iv3-h2-media { min-height: 460px; }
-  .iv3-h2-copy { padding: 120px 32px 40px; }
-  .iv3-h2-side { padding: 44px 32px; }
-  .iv3-h2-side::before { top: 0; bottom: auto; left: 32px; width: 64px; height: 3px; }
-  .iv3-h2-side .iv3-hero-form { max-width: 520px; }
-  .iv3-form-wide .iv3-hform { grid-template-columns: 1fr 1fr; }
-  .iv3-form-wide .iv3-hf-ubic, .iv3-form-wide .iv3-hform-submit { grid-column: 1 / -1; }
+  .iv3-hero-1 .iv3-hero-in, .iv3-hero-2 .iv3-hero-in, .iv3-hero-3 .iv3-hero-in { grid-template-columns: 1fr; gap: 40px; min-height: 0; padding-top: 56px; padding-bottom: 56px; }
+  .iv3-hero-1 .iv3-form-card, .iv3-hero-2 .iv3-form-card, .iv3-form-line { max-width: 520px; }
+  .iv3-hero-3 .iv3-hero-copy { padding-right: 0; border-right: 0; padding-bottom: 40px; border-bottom: 1px solid rgba(255, 255, 255, .1); }
 }
 @media (max-width: 767px) {
   .iv3-hero-in { padding: 0 20px; }
   .iv3-kicker { font-size: 11px; margin-bottom: 16px; }
   .iv3-hero-lead { font-size: 16px; }
   .iv3-hero-1::before { background: linear-gradient(180deg, rgba(14, 15, 16, .6), rgba(14, 15, 16, .85)); }
-  .iv3-hero-1 .iv3-hero-in { padding-top: 44px; padding-bottom: 32px; gap: 28px; }
-  .iv3-hero-1 .iv3-hero-lead { margin-bottom: 24px; }
-  .iv3-form-card, .iv3-form-wide { padding: 22px 18px; }
-  .iv3-h2-media { min-height: 0; }
-  .iv3-h2-copy { padding: 120px 20px 32px; }
-  .iv3-h2-side { padding: 36px 20px; }
-  .iv3-h2-side::before { left: 20px; }
-  .iv3-hero-3 .iv3-hero-in { padding-top: 44px; padding-bottom: 36px; }
-  .iv3-hero-3 .iv3-hero-lead { margin-bottom: 26px; }
-  .iv3-form-wide .iv3-hform-head { display: block; }
-  .iv3-form-wide .iv3-hform-sub { margin-top: 4px; }
+  .iv3-hero-1 .iv3-hero-in, .iv3-hero-2 .iv3-hero-in, .iv3-hero-3 .iv3-hero-in { padding-top: 44px; padding-bottom: 36px; gap: 28px; }
+  .iv3-hero-1 .iv3-hero-lead, .iv3-hero-2 .iv3-hero-lead, .iv3-hero-3 .iv3-hero-lead { margin-bottom: 24px; }
+  .iv3-form-card { padding: 22px 18px; }
+  .iv3-hero-3 .iv3-hero-copy { padding-bottom: 32px; }
+  .iv3-form-line .iv3-hform { column-gap: 18px; }
 }
 
 /* --- Selector de versiones con flechas (solo prototipo) ------------------- */
