@@ -74,12 +74,12 @@
 
 /* Formulario de líneas, sin cajas (propuesta 3) */
 .iv3-form-line .iv3-hform { column-gap: 28px; row-gap: 6px; }
-.iv3-form-line .iv3-hform-head { margin-bottom: 10px; }
-.iv3-form-line .iv3-hfield input, .iv3-form-line .iv3-hfield select { height: 54px; padding: 0; border: 0; border-bottom: 1px solid rgba(255, 255, 255, .2); border-radius: 0; background-color: transparent; }
+.iv3-form-line .iv3-hform-head { margin-bottom: 2px; }
+.iv3-form-line .iv3-hfield input, .iv3-form-line .iv3-hfield select { height: 48px; padding: 0; border: 0; border-bottom: 1px solid rgba(255, 255, 255, .2); border-radius: 0; background-color: transparent; }
 .iv3-form-line .iv3-hfield select { background-position: right 0 center; }
 .iv3-form-line .iv3-hfield input:focus, .iv3-form-line .iv3-hfield select:focus { background-color: transparent; border-bottom-color: var(--iv3-orange); }
 .iv3-form-line .iv3-hfield.is-error input, .iv3-form-line .iv3-hfield.is-error select { border-bottom-color: #d0533f; }
-.iv3-form-line .iv3-hform-submit { margin-top: 22px; border-radius: 40px; }
+.iv3-form-line .iv3-hform-submit { margin-top: 16px; border-radius: 40px; }
 .iv3-form-line .iv3-hcheck { margin-top: 6px; }
 
 /* --- Propuesta 1 · Tarjeta -------------------------------------------------- */
@@ -88,40 +88,59 @@
 .iv3-hero-1 h1 { font-size: clamp(42px, 4.6vw, 64px); margin-bottom: 20px; }
 .iv3-hero-1 .iv3-hero-lead { margin-bottom: 32px; }
 
-/* --- Propuestas 2 y 3 · Minimal (sin foto, solo tipografía y formulario) ---- */
-.iv3-hero-2::before, .iv3-hero-3::before { display: none; }
-.iv3-hero-2 .iv3-hero-in, .iv3-hero-3 .iv3-hero-in { display: grid; grid-template-columns: 1fr 400px; align-items: center; gap: 96px; min-height: 580px; padding-top: 72px; padding-bottom: 72px; }
-.iv3-hero-2 h1, .iv3-hero-3 h1 { font-size: clamp(44px, 5vw, 72px); font-weight: 400; line-height: 1.02; letter-spacing: -.03em; margin-bottom: 24px; }
-.iv3-hero-2 .iv3-hero-lead, .iv3-hero-3 .iv3-hero-lead { margin-bottom: 36px; }
-
-/* 2 · Minimal claro */
-.iv3-hero-2 { background: var(--iv3-beige); color: var(--iv3-text); border-bottom: 1px solid var(--iv3-line); }
-.iv3-hero-2 h1 { color: var(--iv3-black); }
+/* --- Propuesta 2 · Editorial claro ----------------------------------------- */
+.iv3-hero-2 { background: var(--iv3-beige); color: var(--iv3-text); }
+.iv3-hero-2::before { display: none; }
+.iv3-hero-2 .iv3-hero-in { padding-top: 48px; padding-bottom: 48px; }
+.iv3-h2-top { display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: end; margin-bottom: 32px; }
 .iv3-hero-2 .iv3-kicker { color: var(--iv3-text); }
+.iv3-hero-2 h1 { color: var(--iv3-black); font-size: clamp(42px, 4.6vw, 64px); font-weight: 400; line-height: 1.02; letter-spacing: -.03em; }
+.iv3-h2-aside .iv3-hero-lead { margin-bottom: 22px; }
 .iv3-hero-2 .iv3-hero-link { color: var(--iv3-black) !important; }
-.iv3-hero-2 .iv3-form-card { box-shadow: 0 30px 60px rgba(14, 15, 16, .18); }
+.iv3-h2-band { position: relative; display: flex; align-items: center; justify-content: flex-end; min-height: 380px; padding: 0 32px; }
+.iv3-h2-photo { position: absolute; inset: 0; border-radius: 20px; overflow: hidden; }
+.iv3-hero-2 .iv3-h2-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
+.iv3-h2-band .iv3-form-card { position: relative; width: 400px; margin: 24px 0; padding: 24px 26px; }
 
-/* 3 · Minimal oscuro */
-.iv3-hero-3 { background: var(--iv3-black); }
-.iv3-hero-3 .iv3-hero-in { grid-template-columns: 1fr 420px; }
-.iv3-hero-3 .iv3-hero-copy { padding-right: 96px; border-right: 1px solid rgba(255, 255, 255, .1); }
-.iv3-hero-3 .iv3-hero-in { gap: 80px; }
+/* --- Propuesta 3 · Mitad oscura -------------------------------------------- */
+.iv3-hero-3 { display: grid; grid-template-columns: 1fr 1fr; background: var(--iv3-black); min-height: 620px; }
+.iv3-hero-3::before { display: none; }
+.iv3-h3-text { display: flex; align-items: center; justify-content: flex-end; padding: 48px 72px 48px max(32px, calc((100vw - var(--iv3-max)) / 2)); }
+.iv3-h3-inner { width: 100%; max-width: 500px; }
+.iv3-hero-3 h1 { font-size: clamp(38px, 3.8vw, 52px); font-weight: 400; line-height: 1.04; letter-spacing: -.03em; margin-bottom: 18px; }
+.iv3-hero-3 .iv3-hero-lead { margin-bottom: 22px; }
+.iv3-h3-photo { position: relative; overflow: hidden; }
+.iv3-hero-3 .iv3-h3-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 30% 50%; }
+.iv3-h3-cta { position: absolute; left: 28px; bottom: 28px; display: inline-flex; gap: 10px; padding: 13px 22px; border-radius: 40px; background: #fff; color: var(--iv3-black) !important; text-decoration: none; font: 700 14px "Century", Sans-serif; box-shadow: 0 10px 30px rgba(0, 0, 0, .2); transition: gap .25s var(--ease); }
+.iv3-h3-cta:hover { gap: 16px; }
 
 /* --- Responsive ----------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .iv3-hero-1 .iv3-hero-in, .iv3-hero-2 .iv3-hero-in, .iv3-hero-3 .iv3-hero-in { grid-template-columns: 1fr; gap: 40px; min-height: 0; padding-top: 56px; padding-bottom: 56px; }
-  .iv3-hero-1 .iv3-form-card, .iv3-hero-2 .iv3-form-card, .iv3-form-line { max-width: 520px; }
-  .iv3-hero-3 .iv3-hero-copy { padding-right: 0; border-right: 0; padding-bottom: 40px; border-bottom: 1px solid rgba(255, 255, 255, .1); }
+  .iv3-hero-1 .iv3-hero-in { grid-template-columns: 1fr; gap: 40px; min-height: 0; padding-top: 56px; padding-bottom: 56px; }
+  .iv3-hero-1 .iv3-form-card { max-width: 520px; }
+  .iv3-h2-top { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; }
+  .iv3-h2-band { display: block; min-height: 0; padding: 0; }
+  .iv3-h2-photo { position: relative; height: 320px; }
+  .iv3-h2-band .iv3-form-card { width: auto; max-width: 520px; margin: -80px 24px 0; }
+  .iv3-hero-3 { grid-template-columns: 1fr; }
+  .iv3-h3-photo { order: -1; height: 300px; }
+  .iv3-h3-text { justify-content: flex-start; padding: 48px 32px; }
+  .iv3-h3-inner { max-width: 560px; }
 }
 @media (max-width: 767px) {
   .iv3-hero-in { padding: 0 20px; }
   .iv3-kicker { font-size: 11px; margin-bottom: 16px; }
   .iv3-hero-lead { font-size: 16px; }
   .iv3-hero-1::before { background: linear-gradient(180deg, rgba(14, 15, 16, .6), rgba(14, 15, 16, .85)); }
-  .iv3-hero-1 .iv3-hero-in, .iv3-hero-2 .iv3-hero-in, .iv3-hero-3 .iv3-hero-in { padding-top: 44px; padding-bottom: 36px; gap: 28px; }
-  .iv3-hero-1 .iv3-hero-lead, .iv3-hero-2 .iv3-hero-lead, .iv3-hero-3 .iv3-hero-lead { margin-bottom: 24px; }
+  .iv3-hero-1 .iv3-hero-in { padding-top: 44px; padding-bottom: 36px; gap: 28px; }
+  .iv3-hero-1 .iv3-hero-lead { margin-bottom: 24px; }
   .iv3-form-card { padding: 22px 18px; }
-  .iv3-hero-3 .iv3-hero-copy { padding-bottom: 32px; }
+  .iv3-hero-2 .iv3-hero-in { padding-top: 44px; padding-bottom: 40px; }
+  .iv3-h2-photo { height: 240px; border-radius: 16px; }
+  .iv3-h2-band .iv3-form-card { margin: -56px 12px 0; }
+  .iv3-h3-photo { height: 240px; }
+  .iv3-h3-text { padding: 40px 20px; }
+  .iv3-h3-cta { left: 16px; bottom: 16px; }
   .iv3-form-line .iv3-hform { column-gap: 18px; }
 }
 
