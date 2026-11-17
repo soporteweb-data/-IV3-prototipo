@@ -89,18 +89,25 @@
 .iv3-hero-1 .iv3-hero-lead { margin-bottom: 32px; }
 
 /* --- Propuesta 2 · Editorial claro ----------------------------------------- */
-.iv3-hero-2 { background: var(--iv3-beige); color: var(--iv3-text); }
+
+.iv3-hero-2 { display: grid; grid-template-columns: 1fr 1fr; min-height: 620px; background: var(--iv3-beige); color: var(--iv3-text); }
 .iv3-hero-2::before { display: none; }
-.iv3-hero-2 .iv3-hero-in { padding-top: 48px; padding-bottom: 48px; }
-.iv3-h2-top { display: grid; grid-template-columns: 1fr 400px; gap: 64px; align-items: end; margin-bottom: 32px; }
-.iv3-hero-2 .iv3-kicker { color: var(--iv3-text); }
-.iv3-hero-2 h1 { color: var(--iv3-black); font-size: clamp(42px, 4.6vw, 64px); font-weight: 400; line-height: 1.02; letter-spacing: -.03em; }
-.iv3-h2-aside .iv3-hero-lead { margin-bottom: 22px; }
-.iv3-hero-2 .iv3-hero-link { color: var(--iv3-black) !important; }
-.iv3-h2-band { position: relative; display: flex; align-items: center; justify-content: flex-end; min-height: 380px; padding: 0 32px; }
-.iv3-h2-photo { position: absolute; inset: 0; border-radius: 20px; overflow: hidden; }
+.iv3-h2-photo { position: relative; overflow: hidden; }
 .iv3-hero-2 .iv3-h2-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
-.iv3-h2-band .iv3-form-card { position: relative; width: 400px; margin: 24px 0; padding: 24px 26px; }
+.iv3-h2-text { display: flex; align-items: center; padding: 40px max(32px, calc((100vw - var(--iv3-max)) / 2)) 40px 72px; }
+.iv3-h2-inner { width: 100%; max-width: 560px; }
+.iv3-hero-2 .iv3-kicker { color: var(--iv3-text); }
+.iv3-hero-2 h1 { color: var(--iv3-black); font-size: clamp(38px, 3.8vw, 54px); font-weight: 400; line-height: 1.04; letter-spacing: -.03em; margin-bottom: 16px; }
+.iv3-hero-2 .iv3-hero-lead { margin-bottom: 24px; }
+.iv3-hero-2 .iv3-hero-link { color: var(--iv3-black) !important; margin-top: 20px; }
+/* Formulario en filas de 3 (propuesta 2) */
+.iv3-form-row { padding: 22px 24px; }
+.iv3-form-row .iv3-hform { grid-template-columns: repeat(3, 1fr); }
+.iv3-form-row .iv3-hform-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.iv3-form-row .iv3-hform-sub { margin: 0; }
+.iv3-form-row .iv3-hf-ubic { grid-column: 1 / -1; }
+.iv3-form-row .iv3-hform-submit { grid-column: span 2; }
+.iv3-form-row .iv3-hform-submit { height: 48px; }
 
 /* --- Propuesta 3 · Mitad oscura -------------------------------------------- */
 .iv3-hero-3 { display: grid; grid-template-columns: 1fr 1fr; background: var(--iv3-black); min-height: 620px; }
@@ -118,10 +125,9 @@
 @media (max-width: 1024px) {
   .iv3-hero-1 .iv3-hero-in { grid-template-columns: 1fr; gap: 40px; min-height: 0; padding-top: 56px; padding-bottom: 56px; }
   .iv3-hero-1 .iv3-form-card { max-width: 520px; }
-  .iv3-h2-top { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; }
-  .iv3-h2-band { display: block; min-height: 0; padding: 0; }
-  .iv3-h2-photo { position: relative; height: 320px; }
-  .iv3-h2-band .iv3-form-card { width: auto; max-width: 520px; margin: -80px 24px 0; }
+  .iv3-hero-2 { grid-template-columns: 1fr; }
+  .iv3-h2-photo { height: 300px; }
+  .iv3-h2-text { padding: 48px 32px; }
   .iv3-hero-3 { grid-template-columns: 1fr; }
   .iv3-h3-photo { order: -1; height: 300px; }
   .iv3-h3-text { justify-content: flex-start; padding: 48px 32px; }
@@ -135,9 +141,11 @@
   .iv3-hero-1 .iv3-hero-in { padding-top: 44px; padding-bottom: 36px; gap: 28px; }
   .iv3-hero-1 .iv3-hero-lead { margin-bottom: 24px; }
   .iv3-form-card { padding: 22px 18px; }
-  .iv3-hero-2 .iv3-hero-in { padding-top: 44px; padding-bottom: 40px; }
-  .iv3-h2-photo { height: 240px; border-radius: 16px; }
-  .iv3-h2-band .iv3-form-card { margin: -56px 12px 0; }
+  .iv3-h2-photo { height: 240px; }
+  .iv3-h2-text { padding: 40px 20px; }
+  .iv3-form-row { padding: 22px 18px; }
+  .iv3-form-row .iv3-hform { grid-template-columns: 1fr 1fr; }
+  .iv3-form-row .iv3-hf-ubic, .iv3-form-row .iv3-hform-submit { grid-column: 1 / -1; }
   .iv3-h3-photo { height: 240px; }
   .iv3-h3-text { padding: 40px 20px; }
   .iv3-h3-cta { left: 16px; bottom: 16px; }
