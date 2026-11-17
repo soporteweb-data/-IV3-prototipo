@@ -1,0 +1,188 @@
+<!-- IV3 · Inicio · Testimonios (va debajo de "Diseñar es escuchar…") -->
+<section class="iv3-sec iv3-testimonios" id="testimonios" aria-labelledby="iv3-test-title">
+  <div class="iv3-wrap" data-iv3-testimonios>
+    <header class="iv3-thead iv3-reveal">
+      <span class="iv3-num iv3-num-center">Testimonios</span>
+      <h2 class="iv3-h2" id="iv3-test-title">Opiniones de nuestros <em>clientes</em></h2>
+      <p class="iv3-thead-sub">Familias que ya recibieron su apartamento nos cuentan cómo vivieron la entrega de su nuevo hogar.</p>
+    </header>
+    <div class="iv3-tstage iv3-reveal" aria-roledescription="carrusel" aria-label="Testimonios de clientes">
+      <article class="iv3-tslide is-active" aria-roledescription="testimonio" aria-label="Testimonio 1 de 4">
+        <figure class="iv3-tslide-photo"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_1.jpeg" alt="Clientes de IV3 Arquitectura en la entrega de su apartamento" width="720" height="1280"></figure>
+        <div class="iv3-tslide-body">
+          <span class="iv3-tslide-quote"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg></span>
+          <blockquote>¡Feliz con mi nuevo hogar! El resultado es excelente, pero el verdadero valor estuvo en el gran acompañamiento y la atención de la constructora en todo el proceso. ¡Un trabajo impecable de principio a fin!</blockquote>
+          <footer class="iv3-tslide-author"><strong>Cliente IV3 Arquitectura</strong></footer>
+        </div>
+      </article>
+      <article class="iv3-tslide" aria-roledescription="testimonio" aria-label="Testimonio 2 de 4" aria-hidden="true">
+        <figure class="iv3-tslide-photo"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_2.jpeg" alt="Clientes de IV3 Arquitectura en la entrega de su apartamento" width="900" height="1600" loading="lazy"></figure>
+        <div class="iv3-tslide-body">
+          <span class="iv3-tslide-quote"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg></span>
+          <blockquote>¡Muy feliz con mi nuevo apartamento! Recibirlo terminado y ver que todo quedó tal como lo soñaba fue una experiencia muy especial. Me encantó el resultado y estoy feliz de poder comenzar esta nueva etapa en mi hogar.</blockquote>
+          <footer class="iv3-tslide-author"><strong>Cliente IV3 Arquitectura</strong></footer>
+        </div>
+      </article>
+      <article class="iv3-tslide" aria-roledescription="testimonio" aria-label="Testimonio 3 de 4" aria-hidden="true">
+        <figure class="iv3-tslide-photo"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_3.jpeg" alt="Clientes de IV3 Arquitectura en la entrega de su apartamento" width="900" height="1600" loading="lazy"></figure>
+        <div class="iv3-tslide-body">
+          <span class="iv3-tslide-quote"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg></span>
+          <blockquote>Me pareció muy buena la experiencia de entrega. Se nota que escuchan cuando se hacen los comentarios, y la explicación y el soporte fueron muy buenos. Estoy muy contenta con mi apartamento.</blockquote>
+          <footer class="iv3-tslide-author"><strong>Cliente IV3 Arquitectura</strong></footer>
+        </div>
+      </article>
+      <article class="iv3-tslide" aria-roledescription="testimonio" aria-label="Testimonio 4 de 4" aria-hidden="true">
+        <figure class="iv3-tslide-photo"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_4.jpeg" alt="Clientes de IV3 Arquitectura en la entrega de su apartamento" width="900" height="1600" loading="lazy"></figure>
+        <div class="iv3-tslide-body">
+          <span class="iv3-tslide-quote"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"/></svg></span>
+          <blockquote>Estoy feliz de recibir este apartamento acogedor, con diseños únicos. Es hermoso y, ante todo, ese calor humano que acompaña a todos los integrantes de la constructora es increíble. Ese amor por su trabajo se refleja en todo el conjunto.</blockquote>
+          <footer class="iv3-tslide-author"><strong>Cliente IV3 Arquitectura</strong></footer>
+        </div>
+      </article>
+    </div>
+    <div class="iv3-tbar iv3-reveal">
+      <div class="iv3-tthumbs" role="group" aria-label="Seleccionar testimonio">
+        <button type="button" class="iv3-tthumb is-active" aria-label="Ver testimonio 1" aria-current="true"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_1.jpeg" alt="" loading="lazy"></button>
+        <button type="button" class="iv3-tthumb" aria-label="Ver testimonio 2"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_2.jpeg" alt="" loading="lazy"></button>
+        <button type="button" class="iv3-tthumb" aria-label="Ver testimonio 3"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_3.jpeg" alt="" loading="lazy"></button>
+        <button type="button" class="iv3-tthumb" aria-label="Ver testimonio 4"><img src="https://iv3arquitectura.com/wp-content/uploads/SUBIR-AQUI/Testimonio_4.jpeg" alt="" loading="lazy"></button>
+      </div>
+      <div class="iv3-tnav">
+        <button type="button" class="iv3-arrow prev" aria-label="Testimonio anterior"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"/></svg></button>
+        <span class="iv3-tcount" aria-live="polite"><b>01</b> / 04</span>
+        <button type="button" class="iv3-arrow next" aria-label="Testimonio siguiente"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+/* IV3 Arquitectura — Secciones nuevas (listo para WordPress / Elementor)
+   JavaScript sin dependencias (no requiere jQuery).
+   - Animación de entrada (.iv3-reveal)
+   - Cifras animadas ([data-iv3-count])
+   - Testimonios ([data-iv3-testimonios]): foto grande + lista de 2 opiniones
+   Se puede cargar en el footer del sitio (p. ej. con WPCode) o en un widget HTML. */
+(function () {
+  "use strict";
+  if (window.__iv3Secciones) return;
+  window.__iv3Secciones = true;
+  document.documentElement.classList.add("iv3-js");
+
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+
+  ready(function () {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var hasIO = "IntersectionObserver" in window;
+
+    /* ---- Animación de entrada ------------------------------------------- */
+    var reveals = document.querySelectorAll(".iv3-reveal");
+    if (hasIO && !reduce) {
+      var rio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("is-in"); rio.unobserve(en.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+      reveals.forEach(function (r) { rio.observe(r); });
+    } else {
+      reveals.forEach(function (r) { r.classList.add("is-in"); });
+    }
+
+    /* ---- Cifras animadas -------------------------------------------------- */
+    function fmt(n, sep) {
+      var s = String(Math.round(n));
+      return sep ? s.replace(/\B(?=(\d{3})+(?!\d))/g, sep) : s;
+    }
+    function count(el) {
+      var to = parseFloat(el.getAttribute("data-iv3-count")) || 0;
+      var sep = el.getAttribute("data-iv3-sep") || "";
+      if (reduce) { el.textContent = fmt(to, sep); return; }
+      var t0 = null, dur = 1800;
+      function step(t) {
+        if (!t0) t0 = t;
+        var p = Math.min(1, (t - t0) / dur);
+        el.textContent = fmt(to * (1 - Math.pow(1 - p, 3)), sep);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var nums = document.querySelectorAll("[data-iv3-count]");
+    if (hasIO) {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { count(en.target); cio.unobserve(en.target); }
+        });
+      }, { threshold: 0.5 });
+      nums.forEach(function (n) { cio.observe(n); });
+    }
+
+    /* ---- Testimonios: tarjeta destacada + miniaturas ---------------------- */
+    document.querySelectorAll("[data-iv3-testimonios]").forEach(function (root) {
+      var stage = root.querySelector(".iv3-tstage");
+      var slides = Array.prototype.slice.call(root.querySelectorAll(".iv3-tslide"));
+      var thumbs = Array.prototype.slice.call(root.querySelectorAll(".iv3-tthumb"));
+      var countEl = root.querySelector(".iv3-tcount");
+      var prev = root.querySelector(".iv3-arrow.prev"), next = root.querySelector(".iv3-arrow.next");
+      var n = slides.length, active = 0, timer = null, DUR = 7000;
+      var pad = function (x) { return (x < 10 ? "0" : "") + x; };
+      stage.style.setProperty("--iv3-dur", DUR / 1000 + "s");
+
+      function restartProgress() {
+        stage.classList.remove("is-playing");
+        void stage.offsetWidth;
+        if (!reduce) stage.classList.add("is-playing");
+      }
+      function set(i) {
+        active = (i + n) % n;
+        slides.forEach(function (s, k) {
+          s.classList.toggle("is-active", k === active);
+          s.setAttribute("aria-hidden", k === active ? "false" : "true");
+        });
+        thumbs.forEach(function (t, k) {
+          t.classList.toggle("is-active", k === active);
+          if (k === active) t.setAttribute("aria-current", "true"); else t.removeAttribute("aria-current");
+        });
+        if (countEl) countEl.innerHTML = "<b>" + pad(active + 1) + "</b> / " + pad(n);
+        play();
+      }
+      function stop() { if (timer) clearTimeout(timer); timer = null; }
+      function play() {
+        stop();
+        restartProgress();
+        if (reduce || paused) return;
+        timer = setTimeout(function () { set(active + 1); }, DUR);
+      }
+      var paused = false;
+      function pause() { paused = true; stop(); stage.classList.add("is-paused"); }
+      function resume() { paused = false; stage.classList.remove("is-paused"); play(); }
+
+      if (prev) prev.addEventListener("click", function () { set(active - 1); });
+      if (next) next.addEventListener("click", function () { set(active + 1); });
+      thumbs.forEach(function (t, k) { t.addEventListener("click", function () { set(k); }); });
+      stage.addEventListener("mouseenter", pause);
+      stage.addEventListener("mouseleave", resume);
+      root.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") set(active - 1);
+        if (e.key === "ArrowRight") set(active + 1);
+      });
+      var x0 = null;
+      stage.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      stage.addEventListener("touchend", function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) set(active + (dx < 0 ? 1 : -1));
+        x0 = null;
+      });
+      // Solo corre el autoplay cuando la sección está en pantalla
+      if (hasIO) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { if (!timer && !paused) play(); } else { stop(); stage.classList.remove("is-playing"); } });
+        }, { threshold: 0.3 }).observe(stage);
+      }
+      set(0);
+    });
+  });
+})();
+</script>

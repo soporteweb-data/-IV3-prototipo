@@ -1,0 +1,274 @@
+<!-- IV3 · Sobre nosotros · Hero + cifras -->
+<section class="iv3-sec iv3-nhero" aria-labelledby="iv3-nos-title">
+  <img class="iv3-nhero-mark" src="https://iv3arquitectura.com/wp-content/uploads/2026/06/IV3.webp" alt="" aria-hidden="true">
+  <div class="iv3-wrap">
+    <nav class="iv3-crumbs" aria-label="Ruta"><a href="https://iv3arquitectura.com/">Inicio</a><span>/</span>Sobre nosotros</nav>
+    <h1 id="iv3-nos-title">Más de 25 años desarrollando vivienda con <em>criterio arquitectónico</em></h1>
+    <div class="iv3-stats">
+      <div class="iv3-stat"><strong>2000</strong><span>Año de fundación</span></div>
+      <div class="iv3-stat"><strong><sup>+</sup><span data-iv3-count="25">25</span></strong><span>Años de trayectoria</span></div>
+      <div class="iv3-stat"><strong><sup>+</sup><span data-iv3-count="1500" data-iv3-sep=".">1.500</span></strong><span>Unidades entregadas</span></div>
+      <div class="iv3-stat"><strong><sup>+</sup><span data-iv3-count="100000" data-iv3-sep=".">100.000</span> m²</strong><span>Metros construidos</span></div>
+    </div>
+  </div>
+</section>
+<!-- IV3 · Sobre nosotros · /01 IV3 Arquitectura -->
+<section class="iv3-sec iv3-intro" id="nosotros" aria-labelledby="iv3-intro-title">
+  <div class="iv3-wrap iv3-intro-grid">
+    <div class="iv3-reveal">
+      <div class="iv3-head">
+        <span class="iv3-num">/01</span>
+        <h2 class="iv3-h2" id="iv3-intro-title">IV3 Arquitectura</h2>
+      </div>
+      <p class="iv3-lead-lg">IV3 Arquitectura es una empresa colombiana dedicada al diseño, la construcción, la gerencia y la comercialización de proyectos de vivienda. Desde su fundación en el año 2000 ha entregado más de 1.500 unidades y ha construido más de 100.000 m². Su enfoque integra la calidad del diseño, el rigor técnico de la obra y la responsabilidad con el entorno urbano.</p>
+      <div class="iv3-intro-meta">
+        <p class="iv3-cities"><svg viewBox="0 0 384 512" aria-hidden="true"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>Barranquilla · Bogotá · Cajicá</p>
+      </div>
+    </div>
+    <figure class="iv3-intro-media iv3-reveal">
+      <img src="https://iv3arquitectura.com/wp-content/uploads/2026/06/Nosotros.webp" alt="Equipo de IV3 Arquitectura en obra" width="500" height="600" loading="lazy">
+      <figcaption>"Diseñar es dejar una huella que dure más que la firma de quien la hizo."</figcaption>
+    </figure>
+  </div>
+</section>
+<!-- IV3 · Sobre nosotros · /02 Trayectoria -->
+<section class="iv3-sec iv3-beige iv3-trayectoria" id="trayectoria" aria-labelledby="iv3-tray-title">
+  <div class="iv3-wrap iv3-tray-grid">
+    <div class="iv3-tray-body iv3-reveal">
+      <div class="iv3-head">
+        <span class="iv3-num">/02</span>
+        <h2 class="iv3-h2" id="iv3-tray-title">Trayectoria</h2>
+      </div>
+      <p class="iv3-text">A lo largo de más de dos décadas hemos participado en proyectos residenciales, comerciales, educativos y de infraestructura. Esa experiencia en distintas escalas y usos consolidó una capacidad técnica que hoy concentramos exclusivamente en el desarrollo de vivienda. Acompañamos cada proyecto durante todo su ciclo: estructuración y viabilidad, diseño, licenciamiento, construcción, comercialización y entrega.</p>
+      <a class="iv3-link" href="https://iv3arquitectura.com/portafolio/">Ver portafolio completo <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg></a>
+    </div>
+    <div class="iv3-mosaic iv3-reveal" aria-label="Proyectos de distintas escalas y usos">
+      <figure class="iv3-tile">
+        <img src="https://iv3arquitectura.com/wp-content/uploads/2026/06/1650919400_mini_dsc_0455.jpg" alt="Camino del Parque, proyecto residencial en Bogotá" loading="lazy">
+        <figcaption><span>Residencial</span>Camino del Parque<small>Bogotá · 498 viviendas</small></figcaption>
+      </figure>
+      <figure class="iv3-tile">
+        <img src="https://iv3arquitectura.com/wp-content/uploads/2026/06/1762227125_mini_5.jpg" alt="Earth School, proyecto educativo en Senegal" loading="lazy">
+        <figcaption><span>Educativo</span>Earth School<small>Senegal</small></figcaption>
+      </figure>
+      <figure class="iv3-tile">
+        <img src="https://iv3arquitectura.com/wp-content/uploads/2026/06/1762228890_mini_dsc_0463.jpg.jpeg" alt="Edificio Plaza 39 en Bogotá" loading="lazy">
+        <figcaption><span>Comercial</span>Edificio Plaza 39<small>Bogotá · 46 oficinas</small></figcaption>
+      </figure>
+      <figure class="iv3-tile">
+        <img src="https://iv3arquitectura.com/wp-content/uploads/2026/06/1650921412_mini_montea.jpg.jpeg" alt="Reasentamientos El Quimbo en Garzón, Huila" loading="lazy">
+        <figcaption><span>Infraestructura</span>Reasentamientos El Quimbo<small>Garzón, Huila</small></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- IV3 · Sobre nosotros · /03 Cuatro pilares -->
+<section class="iv3-sec iv3-pilares" id="pilares" aria-labelledby="iv3-pil-title">
+  <div class="iv3-wrap">
+    <div class="iv3-head iv3-reveal">
+      <span class="iv3-num">/03</span>
+      <h2 class="iv3-h2" id="iv3-pil-title">Cuatro pilares, un mismo oficio.</h2>
+    </div>
+    <div class="iv3-pillars iv3-reveal">
+      <article class="iv3-pillar">
+        <span class="n">/01</span>
+        <h3>Diseño</h3>
+        <p>Proyectos arquitectónicos con intención. Desde el trazo inicial hasta el último detalle constructivo.</p>
+      </article>
+      <article class="iv3-pillar">
+        <span class="n">/02</span>
+        <h3>Construcción</h3>
+        <p>Obra con los más altos estándares técnicos, cronograma cumplido y presupuesto controlado.</p>
+      </article>
+      <article class="iv3-pillar">
+        <span class="n">/03</span>
+        <h3>Gerencia</h3>
+        <p>Acompañamos el proyecto de extremo a extremo: viabilidad, permisos, licencias, ejecución y entrega.</p>
+      </article>
+      <article class="iv3-pillar">
+        <span class="n">/04</span>
+        <h3>Comercialización</h3>
+        <p>Estrategia de venta, posicionamiento y atención al inversionista con transparencia y eficiencia.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- IV3 · Sobre nosotros · /04 Nuestro enfoque -->
+<section class="iv3-sec iv3-dark iv3-enfoque" id="enfoque" aria-labelledby="iv3-enf-title">
+  <div class="iv3-wrap">
+    <div class="iv3-head iv3-reveal">
+      <span class="iv3-num">/04</span>
+      <h2 class="iv3-h2" id="iv3-enf-title">Nuestro enfoque</h2>
+    </div>
+    <div class="iv3-enfoque-grid iv3-reveal">
+      <article class="iv3-enf">
+        <div class="iv3-enf-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
+        <h3>Calidad de vida</h3>
+        <p>Concebimos cada proyecto a partir de las personas que lo habitarán: iluminación y ventilación natural, distribuciones funcionales y zonas comunes pensadas para el uso cotidiano.</p>
+      </article>
+      <article class="iv3-enf">
+        <div class="iv3-enf-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21h20"/><path d="M4 21V10l5-3v14"/><path d="M9 21V4l6 3v14"/><path d="M12 9v.01M12 12v.01M12 15v.01"/><circle cx="19" cy="14.5" r="2.6"/><path d="M19 17.1V21"/></svg></div>
+        <h3>Desarrollo urbano</h3>
+        <p>Entendemos cada edificio como parte de la ciudad. Por eso cuidamos su relación con la escala del sector, el espacio público, los andenes y la arborización, para que el proyecto también aporte a quienes transitan por él.</p>
+      </article>
+      <article class="iv3-enf">
+        <div class="iv3-enf-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9 14.5a3 3 0 0 0 3 3"/></svg></div>
+        <h3>Sostenibilidad</h3>
+        <p>Nuestros proyectos incorporan sistemas de manejo de aguas lluvias que reducen la carga sobre las redes de alcantarillado y promueven un uso responsable del agua. Además, privilegiamos materiales durables y una arquitectura concebida para envejecer bien, lo que reduce el mantenimiento durante toda la vida útil de la edificación.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- IV3 · Sobre nosotros · /05 Una identidad arquitectónica propia -->
+<section class="iv3-sec iv3-beige iv3-identidad" id="identidad" aria-labelledby="iv3-ident-title">
+  <div class="iv3-wrap iv3-ident-grid">
+    <figure class="iv3-ident-media iv3-reveal">
+      <img src="https://iv3arquitectura.com/wp-content/uploads/2026/06/proyecto-1.webp" alt="Fachada en ladrillo a la vista de Ciudadela El Dorado, proyecto de IV3 Arquitectura" width="500" height="700" loading="lazy">
+      <figcaption>Ciudadela El Dorado<small>Cajicá, Cundinamarca</small></figcaption>
+    </figure>
+    <div class="iv3-ident-body iv3-reveal">
+      <div class="iv3-head">
+        <span class="iv3-num">/05</span>
+        <h2 class="iv3-h2" id="iv3-ident-title">Una identidad arquitectónica propia</h2>
+      </div>
+      <p class="iv3-text">Nuestros proyectos se reconocen por el ladrillo a la vista, las cubiertas inclinadas y los volúmenes escalonados. Es un lenguaje que retoma la tradición del ladrillo en la arquitectura colombiana y da como resultado fachadas durables y de bajo mantenimiento. Más que una decisión estética, responde a una prioridad: el bienestar de quienes habitan nuestros proyectos y de quienes los recorren desde la calle.</p>
+      <ul class="iv3-traits" aria-label="Rasgos de nuestra arquitectura">
+        <li><span>/01</span>Ladrillo a la vista</li>
+        <li><span>/02</span>Cubiertas inclinadas</li>
+        <li><span>/03</span>Volúmenes escalonados</li>
+      </ul>
+      <a class="iv3-btn" href="https://iv3arquitectura.com/#proyectos">Ver proyectos en venta <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></svg></a>
+    </div>
+  </div>
+</section>
+<script>
+/* IV3 Arquitectura — Secciones nuevas (listo para WordPress / Elementor)
+   JavaScript sin dependencias (no requiere jQuery).
+   - Animación de entrada (.iv3-reveal)
+   - Cifras animadas ([data-iv3-count])
+   - Testimonios ([data-iv3-testimonios]): foto grande + lista de 2 opiniones
+   Se puede cargar en el footer del sitio (p. ej. con WPCode) o en un widget HTML. */
+(function () {
+  "use strict";
+  if (window.__iv3Secciones) return;
+  window.__iv3Secciones = true;
+  document.documentElement.classList.add("iv3-js");
+
+  function ready(fn) {
+    if (document.readyState !== "loading") fn();
+    else document.addEventListener("DOMContentLoaded", fn);
+  }
+
+  ready(function () {
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var hasIO = "IntersectionObserver" in window;
+
+    /* ---- Animación de entrada ------------------------------------------- */
+    var reveals = document.querySelectorAll(".iv3-reveal");
+    if (hasIO && !reduce) {
+      var rio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("is-in"); rio.unobserve(en.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+      reveals.forEach(function (r) { rio.observe(r); });
+    } else {
+      reveals.forEach(function (r) { r.classList.add("is-in"); });
+    }
+
+    /* ---- Cifras animadas -------------------------------------------------- */
+    function fmt(n, sep) {
+      var s = String(Math.round(n));
+      return sep ? s.replace(/\B(?=(\d{3})+(?!\d))/g, sep) : s;
+    }
+    function count(el) {
+      var to = parseFloat(el.getAttribute("data-iv3-count")) || 0;
+      var sep = el.getAttribute("data-iv3-sep") || "";
+      if (reduce) { el.textContent = fmt(to, sep); return; }
+      var t0 = null, dur = 1800;
+      function step(t) {
+        if (!t0) t0 = t;
+        var p = Math.min(1, (t - t0) / dur);
+        el.textContent = fmt(to * (1 - Math.pow(1 - p, 3)), sep);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var nums = document.querySelectorAll("[data-iv3-count]");
+    if (hasIO) {
+      var cio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { count(en.target); cio.unobserve(en.target); }
+        });
+      }, { threshold: 0.5 });
+      nums.forEach(function (n) { cio.observe(n); });
+    }
+
+    /* ---- Testimonios: tarjeta destacada + miniaturas ---------------------- */
+    document.querySelectorAll("[data-iv3-testimonios]").forEach(function (root) {
+      var stage = root.querySelector(".iv3-tstage");
+      var slides = Array.prototype.slice.call(root.querySelectorAll(".iv3-tslide"));
+      var thumbs = Array.prototype.slice.call(root.querySelectorAll(".iv3-tthumb"));
+      var countEl = root.querySelector(".iv3-tcount");
+      var prev = root.querySelector(".iv3-arrow.prev"), next = root.querySelector(".iv3-arrow.next");
+      var n = slides.length, active = 0, timer = null, DUR = 7000;
+      var pad = function (x) { return (x < 10 ? "0" : "") + x; };
+      stage.style.setProperty("--iv3-dur", DUR / 1000 + "s");
+
+      function restartProgress() {
+        stage.classList.remove("is-playing");
+        void stage.offsetWidth;
+        if (!reduce) stage.classList.add("is-playing");
+      }
+      function set(i) {
+        active = (i + n) % n;
+        slides.forEach(function (s, k) {
+          s.classList.toggle("is-active", k === active);
+          s.setAttribute("aria-hidden", k === active ? "false" : "true");
+        });
+        thumbs.forEach(function (t, k) {
+          t.classList.toggle("is-active", k === active);
+          if (k === active) t.setAttribute("aria-current", "true"); else t.removeAttribute("aria-current");
+        });
+        if (countEl) countEl.innerHTML = "<b>" + pad(active + 1) + "</b> / " + pad(n);
+        play();
+      }
+      function stop() { if (timer) clearTimeout(timer); timer = null; }
+      function play() {
+        stop();
+        restartProgress();
+        if (reduce || paused) return;
+        timer = setTimeout(function () { set(active + 1); }, DUR);
+      }
+      var paused = false;
+      function pause() { paused = true; stop(); stage.classList.add("is-paused"); }
+      function resume() { paused = false; stage.classList.remove("is-paused"); play(); }
+
+      if (prev) prev.addEventListener("click", function () { set(active - 1); });
+      if (next) next.addEventListener("click", function () { set(active + 1); });
+      thumbs.forEach(function (t, k) { t.addEventListener("click", function () { set(k); }); });
+      stage.addEventListener("mouseenter", pause);
+      stage.addEventListener("mouseleave", resume);
+      root.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") set(active - 1);
+        if (e.key === "ArrowRight") set(active + 1);
+      });
+      var x0 = null;
+      stage.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      stage.addEventListener("touchend", function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) set(active + (dx < 0 ? 1 : -1));
+        x0 = null;
+      });
+      // Solo corre el autoplay cuando la sección está en pantalla
+      if (hasIO) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { if (!timer && !paused) play(); } else { stop(); stage.classList.remove("is-playing"); } });
+        }, { threshold: 0.3 }).observe(stage);
+      }
+      set(0);
+    });
+  });
+})();
+</script>
