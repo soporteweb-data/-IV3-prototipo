@@ -1,4 +1,4 @@
-/* IV3 · Propuestas de hero: selector de versión, ventana "Te llamamos" y formularios de prueba (solo prototipo). */
+/* IV3 · Propuestas de hero: selector de versión y formularios de prueba (solo prototipo). */
 (function () {
   "use strict";
   var heroes = document.querySelectorAll("[data-iv3-hero]");
@@ -55,34 +55,6 @@
   alto();
   window.addEventListener("resize", alto);
   mostrar(leer());
-
-  /* Ventana emergente */
-  var ultimo = null;
-  function abrir(id) {
-    var m = document.getElementById(id);
-    if (!m) return;
-    ultimo = document.activeElement;
-    m.hidden = false;
-    document.documentElement.classList.add("iv3-modal-open");
-    var f = m.querySelector("select, input");
-    if (f) f.focus();
-  }
-  function cerrar(m) {
-    m.hidden = true;
-    document.documentElement.classList.remove("iv3-modal-open");
-    if (ultimo) ultimo.focus();
-  }
-  document.addEventListener("click", function (e) {
-    var o = e.target.closest("[data-iv3-open]");
-    if (o) { e.preventDefault(); abrir(o.getAttribute("data-iv3-open")); return; }
-    var c = e.target.closest("[data-iv3-close]");
-    if (c) cerrar(c.closest(".iv3-modal"));
-  });
-  document.addEventListener("keydown", function (e) {
-    if (e.key !== "Escape") return;
-    var m = document.querySelector(".iv3-modal:not([hidden])");
-    if (m) cerrar(m);
-  });
 
   /* Formularios de prueba: validan, pero no envían nada */
   document.querySelectorAll("[data-iv3-proto-form]").forEach(function (form) {
