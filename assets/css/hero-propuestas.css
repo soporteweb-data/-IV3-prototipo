@@ -162,7 +162,7 @@
 .iv3-hero-4 .iv3-h4-stage .iv3-hero-in { min-height: 620px; display: flex; flex-direction: column; justify-content: center; padding-top: 56px; padding-bottom: 72px; }
 .iv3-h4-kicker { display: flex; align-items: center; gap: 16px; margin: 0 0 22px; font-size: 12px; letter-spacing: .26em; text-transform: uppercase; color: #fff; }
 .iv3-h4-kicker span { width: 40px; height: 1px; background: var(--iv3-orange); }
-.iv3-hero-4 h1 { font-size: clamp(48px, 6vw, 86px); font-weight: 400; line-height: 1; letter-spacing: -.035em; margin-bottom: 40px; text-shadow: 0 2px 30px rgba(0, 0, 0, .25); }
+.iv3-hero-4 h1 { font-size: clamp(40px, 4.2vw, 60px); font-weight: 400; line-height: 1; letter-spacing: -.035em; margin-bottom: 32px; text-shadow: 0 2px 30px rgba(0, 0, 0, .25); }
 .iv3-hero-4 h1 i { color: var(--iv3-orange); font-style: normal; }
 .iv3-h4-caption { position: absolute; z-index: 2; right: max(32px, calc((100vw - var(--iv3-max)) / 2)); bottom: 26px; margin: 0; font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: rgba(255, 255, 255, .85); }
 
@@ -172,28 +172,29 @@
 .iv3-cform-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 14px; }
 .iv3-cform-title { margin: 0; font-size: 17px; font-weight: 700; color: #fff; }
 .iv3-cform-sub { margin: 0; font-size: 13px; color: rgba(255, 255, 255, .75); }
-.iv3-cform-grid { display: grid; grid-template-columns: 1fr 1fr; background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 30px 70px rgba(0, 0, 0, .35); }
-.iv3-cell { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 6px; min-height: 74px; padding: 14px 20px; border-bottom: 1px solid #e7e2d9; cursor: text; transition: background .2s; }
-.iv3-cell:nth-child(even):not(.iv3-cell-full) { border-left: 1px solid #e7e2d9; }
+.iv3-cform-grid { display: grid; grid-template-columns: 1fr 1fr; background: rgba(14, 15, 16, .92); border: 1px solid rgba(255, 255, 255, .1); border-radius: 6px; overflow: hidden; box-shadow: 0 30px 70px rgba(0, 0, 0, .4); backdrop-filter: blur(10px); }
+.iv3-cell { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 6px; min-height: 74px; padding: 14px 20px; border-bottom: 1px solid rgba(255, 255, 255, .1); cursor: text; transition: background .2s; }
+.iv3-cell:nth-child(even):not(.iv3-cell-full) { border-left: 1px solid rgba(255, 255, 255, .1); }
 .iv3-cell-full { grid-column: 1 / -1; }
 .iv3-cell::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--iv3-orange); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
-.iv3-cell:focus-within { background: #fbf9f6; }
+.iv3-cell:focus-within { background: rgba(255, 255, 255, .05); }
 .iv3-cell:focus-within::after { transform: scaleX(1); }
-.iv3-cell > span { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #8e877c; transition: color .2s; }
+.iv3-cell > span { font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255, 255, 255, .5); transition: color .2s; }
 .iv3-cell:focus-within > span { color: var(--iv3-orange); }
-.iv3-cell input, .iv3-cell select { width: 100%; border: 0; padding: 0; background: transparent; outline: none; font: 400 16px "Century", Sans-serif; color: var(--iv3-black); appearance: none; -webkit-appearance: none; }
-.iv3-cell input::placeholder { color: #b1aa9f; }
+.iv3-cell input, .iv3-cell select { width: 100%; border: 0; padding: 0; background: transparent; outline: none; font: 400 16px "Century", Sans-serif; color: #fff; appearance: none; -webkit-appearance: none; }
+.iv3-cell input::placeholder { color: rgba(255, 255, 255, .35); }
+.iv3-cell select option { color: #000; }
 .iv3-cform .iv3-cell input:focus, .iv3-cform .iv3-cell select:focus { background-color: transparent; border: 0; }
 .iv3-cell select { cursor: pointer; padding-right: 28px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' fill='none' stroke='%23F0A23E' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 0 center / 16px; }
-.iv3-cell select:invalid { color: #8e877c; }
+.iv3-cell select:invalid { color: rgba(255, 255, 255, .5); }
 .iv3-cell.is-error::after { transform: scaleX(1); background: #d0533f; }
 .iv3-cell.is-error > span { color: #d0533f; }
-.iv3-cell-check { flex-direction: row; align-items: center; gap: 10px; min-height: 64px; border-bottom: 0; font-size: 12px; line-height: 1.45; color: var(--iv3-text); cursor: pointer; }
+.iv3-cell-check { flex-direction: row; align-items: center; gap: 10px; min-height: 64px; border-bottom: 0; font-size: 12px; line-height: 1.45; color: rgba(255, 255, 255, .6); cursor: pointer; }
 .iv3-cell-check::after { display: none; }
-.iv3-cell-check > span, .iv3-cell-check:focus-within > span { font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--iv3-text); }
+.iv3-cell-check > span, .iv3-cell-check:focus-within > span { font-size: 12px; letter-spacing: 0; text-transform: none; color: rgba(255, 255, 255, .6); }
 .iv3-cform .iv3-cell-check input { width: 18px; height: 18px; flex: none; margin: 0; accent-color: var(--iv3-orange); appearance: auto; -webkit-appearance: checkbox; cursor: pointer; }
-.iv3-cell-check a { color: var(--iv3-black); text-decoration: underline; text-underline-offset: 2px; }
+.iv3-cell-check a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
 .iv3-cell-send { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 64px; border: 0; background: var(--iv3-orange); color: #000; cursor: pointer; font: 700 13px "Century", Sans-serif; letter-spacing: .24em; text-transform: uppercase; transition: background .25s; }
 .iv3-cell-send svg { width: 20px; height: 20px; transition: transform .3s var(--ease); }
 .iv3-cell-send:hover { background: #f3b058; }
@@ -220,7 +221,7 @@
   .iv3-cell { min-height: 66px; padding: 12px 16px; }
   .iv3-cell input, .iv3-cell select { font-size: 15px; }
   .iv3-cell-check, .iv3-cell-send { grid-column: 1 / -1; }
-  .iv3-cell-check { border-bottom: 1px solid #e7e2d9; }
+  .iv3-cell-check { border-bottom: 1px solid rgba(255, 255, 255, .1); }
   .iv3-h4-caption { left: 20px; right: auto; bottom: 20px; font-size: 10px; }
   .iv3-h4-stats dl { grid-template-columns: 1fr; padding-top: 36px; padding-bottom: 36px; gap: 22px; }
   .iv3-h4-stats dl > div { padding: 0; border-left: 0; }
