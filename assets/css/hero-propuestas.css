@@ -204,6 +204,8 @@
 /* Franja de cifras */
 .iv3-h4-stats { background: var(--iv3-beige); color: var(--iv3-text); }
 .iv3-h4-stats dl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0 auto; padding-top: 52px; padding-bottom: 52px; }
+.iv3-h4-stats dl { position: relative; }
+.iv3-h4-stats dl::after { content: ""; position: absolute; left: 32px; right: 32px; bottom: 0; height: 1px; background: var(--iv3-line); }
 .iv3-h4-stats dl > div { padding: 4px 40px; border-left: 1px solid var(--iv3-line); }
 .iv3-h4-stats dl > div:first-child { padding-left: 0; border-left: 0; }
 .iv3-h4-stats dt { font-size: clamp(36px, 3.6vw, 50px); line-height: 1; font-weight: 400; letter-spacing: -.02em; color: var(--iv3-black); }
@@ -224,6 +226,7 @@
   .iv3-h4-caption { left: 20px; right: auto; bottom: 20px; font-size: 10px; }
   .iv3-h4-stats dl { grid-template-columns: 1fr; padding-top: 36px; padding-bottom: 36px; gap: 22px; }
   .iv3-h4-stats dl > div { padding: 0; border-left: 0; }
+  .iv3-h4-stats dl::after { left: 20px; right: 20px; }
   .iv3-h4-stats dl > div + div { padding-top: 22px; border-top: 1px solid var(--iv3-line); }
 }
 
