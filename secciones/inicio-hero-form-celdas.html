@@ -1,0 +1,18 @@
+<!-- Formulario "Te llamamos" en celdas (propuesta 4). Mismos campos que el formulario actual de Elementor. -->
+<form class="iv3-cform" novalidate data-iv3-proto-form>
+  <div class="iv3-cform-head">
+    <p class="iv3-cform-title">Te llamamos</p>
+    <p class="iv3-cform-sub">Un asesor te contactará en menos de 24 horas.</p>
+  </div>
+  <div class="iv3-cform-grid">
+    <label class="iv3-hfield iv3-cell iv3-cell-full"><span>¿Dónde deseas comprar?</span>
+      <select name="ubicacion" required><option value="">Selecciona…</option><option>Cajicá</option></select></label>
+    <label class="iv3-hfield iv3-cell"><span>Nombre</span><input type="text" name="nombre" placeholder="Juan" autocomplete="given-name" required></label>
+    <label class="iv3-hfield iv3-cell"><span>Apellido</span><input type="text" name="apellido" placeholder="Pérez" autocomplete="family-name" required></label>
+    <label class="iv3-hfield iv3-cell"><span>Celular</span><input type="tel" name="celular" placeholder="300 000 0000" autocomplete="tel" required></label>
+    <label class="iv3-hfield iv3-cell"><span>Correo</span><input type="email" name="email" placeholder="tu@correo.com" autocomplete="email" required></label>
+    <label class="iv3-cell iv3-cell-check"><input type="checkbox" required><span>Acepto la <a href="https://iv3arquitectura.com/politica-de-privacidad/" target="_blank" rel="noopener">política de privacidad</a> de IV3 Arquitectura</span></label>
+    <button type="submit" class="iv3-cell-send">Enviar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+  <p class="iv3-hform-msg" role="status" hidden></p>
+</form>

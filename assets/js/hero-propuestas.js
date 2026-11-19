@@ -5,7 +5,7 @@
   if (!heroes.length) return;
 
   /* Versiones propuestas (la actual sigue disponible con ?hero=actual) */
-  var VERS = ["1", "2", "3"];
+  var VERS = ["1", "2", "3", "4"];
   var KEY = "iv3-hero";
   var actual = "1";
 
